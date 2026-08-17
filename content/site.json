@@ -3,16 +3,28 @@
   "role": "Technology Lead",
   "employer": "Freshwater Creative",
   "employerUrl": "https://freshwatercreative.ca",
-  "email": "dave@daveboutin.ca",
+  "email": "hello@daveboutin.ca",
   "introduction": "I’m Dave, a technology lead and senior developer who helps teams turn complex requirements into durable digital products.",
   "about": {
     "lede": "I’ve always been drawn to the moment when a complicated problem starts becoming a clear, useful system.",
     "body": "My background crosses application development, content platforms, infrastructure, consulting, and team leadership. That range helps me move comfortably between strategy and implementation—and keep both grounded in what people actually need."
   },
   "experience": [
-    { "company": "Freshwater Creative", "role": "Technology Lead", "description": "Leading technical direction and delivery for ambitious digital work." },
-    { "company": "Banff Centre for Arts and Creativity", "role": "Senior Business Consultant", "description": "Connected organizational needs with sustainable systems, platforms, and delivery practices." },
-    { "company": "SGI · Ambyint/Pumpwell · Trigger Communications", "role": "Earlier roles", "description": "Experience spanning development, application support, infrastructure, and creative technology environments." }
+    {
+      "company": "Freshwater Creative",
+      "role": "Technology Lead",
+      "description": "Leading technical direction and delivery for ambitious digital work."
+    },
+    {
+      "company": "Banff Centre for Arts and Creativity",
+      "role": "Senior Business Consultant",
+      "description": "Connected organizational needs with sustainable systems, platforms, and delivery practices."
+    },
+    {
+      "company": "SGI · Ambyint/Pumpwell · Trigger Communications",
+      "role": "Earlier roles",
+      "description": "Experience spanning development, application support, infrastructure, and creative technology environments."
+    }
   ],
   "linkedin": "https://www.linkedin.com/in/djboutin/",
   "behance": "https://www.behance.net/djboutin",
