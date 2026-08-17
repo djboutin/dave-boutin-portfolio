@@ -10,7 +10,7 @@ export function ContactForm() {
     const body = new URLSearchParams();
     new FormData(form).forEach((value, key) => body.append(key, String(value)));
     try {
-      const response = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
+      const response = await fetch("/forms/contact.html", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
       if (!response.ok) throw new Error("Submission failed");
       form.reset(); setStatus("success");
     } catch { setStatus("error"); }
