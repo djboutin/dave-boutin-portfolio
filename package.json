@@ -1,0 +1,46 @@
+{
+    "title": "DaveBoutin",
+    "name": "daveboutin",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node_modules/.bin/gulp watch"
+    },
+    "description": "Simple bootstrap theme for Dave Boutin personal site.",
+    "keywords": [
+        "css",
+        "sass",
+        "html",
+        "responsive",
+        "theme",
+        "template"
+    ],
+    "homepage": "https://daveboutin.ca",
+    "license": "MIT",
+    "author": "Dave Boutin",
+    "contributors": [
+        "Dave Boutin (http://daveboutin.ca/)"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://bitbucket.org/alicap99/dave-boutin-2019.git"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "5.10.2",
+        "bootstrap": "4.3.1",
+        "jquery": "3.4.1",
+        "jquery.easing": "^1.4.1"
+    },
+    "devDependencies": {
+        "browser-sync": "2.26.7",
+        "del": "5.1.0",
+        "gulp": "4.0.2",
+        "gulp-autoprefixer": "7.0.0",
+        "gulp-clean-css": "4.2.0",
+        "gulp-header": "2.0.9",
+        "gulp-plumber": "^1.2.1",
+        "gulp-rename": "1.4.0",
+        "gulp-sass": "4.0.2",
+        "gulp-uglify": "3.0.2",
+        "merge-stream": "2.0.0"
+    }
+}

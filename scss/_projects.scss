@@ -1,0 +1,47 @@
+.projects-section {
+  padding: 0;
+  background: linear-gradient(to bottom, $gray-100 0%,$gray-200 50%,#D1D1D1 100%);
+
+  h2{
+    max-width: 300px;
+    border-bottom: 0.2rem solid $primary;
+    padding-bottom: 5px;
+    text-align: left;
+    
+  }
+  
+  .container{
+    max-width: 80%;
+
+    @media (min-width: 992px){
+      max-width: 2048px;
+      padding: 3em;
+    }
+  }
+
+  .past-projects{
+    margin-top: 2rem;
+
+  }
+  .featured-text {
+    padding: 2rem;
+    
+    @media (min-width: 992px) {
+      padding: 0 0 0 5rem;
+      margin-top: 30%;
+      border-left: 0.5rem solid $primary;
+    }
+  }
+  .project-text {
+    padding: 3rem;
+    font-size: 90%;
+    @media (min-width: 992px) {
+      padding: 5rem;
+      hr {
+        border-color: $primary;
+        border-width: .25rem;
+        width: 30%;
+      }
+    }
+  }
+}
