@@ -1,0 +1,71 @@
+media:
+  input: public/images
+  output: /images
+  rename: safe
+  extensions: [jpg, jpeg, png, webp, gif]
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: content/projects
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    exclude: [README.md]
+    view:
+      fields: [title, category, year, featured, draft]
+      primary: title
+      sort: [order, year, title]
+      default: { sort: order, order: asc }
+    fields:
+      - { name: title, label: Project title, type: string, required: true }
+      - { name: summary, label: Short summary, type: text, required: true }
+      - { name: category, label: Category, type: string, required: true }
+      - { name: year, label: Year, type: string, required: true }
+      - { name: role, label: My role, type: string, required: true }
+      - name: cover
+        label: Cover image
+        type: image
+        options: { path: projects, extensions: [jpg, jpeg, png, webp], rename: safe }
+      - name: gallery
+        label: Gallery
+        type: image
+        options: { path: projects, multiple: { max: 12 }, unique: true, extensions: [jpg, jpeg, png, webp], rename: safe }
+      - { name: tags, label: Tools and capabilities, type: string, list: true }
+      - { name: externalUrl, label: Live project URL, type: string }
+      - { name: featured, label: Feature on homepage, type: boolean }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: order, label: Display order, type: number }
+      - name: body
+        label: Case study
+        type: rich-text
+        options: { format: markdown, path: public/images/projects, rename: safe }
+  - name: site
+    label: Site content
+    type: file
+    path: content/site.json
+    format: json
+    operations: { delete: false }
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: role, label: Current title, type: string }
+      - { name: employer, label: Current employer, type: string }
+      - { name: employerUrl, label: Employer URL, type: string }
+      - { name: email, label: Email, type: string }
+      - { name: introduction, label: Homepage introduction, type: text }
+      - name: about
+        label: About preview
+        type: object
+        fields:
+          - { name: lede, label: Opening statement, type: text }
+          - { name: body, label: Short biography, type: text }
+      - name: experience
+        label: Experience
+        type: object
+        list: { collapsible: { collapsed: true, summary: "{role} — {company}" } }
+        fields:
+          - { name: company, type: string }
+          - { name: role, type: string }
+          - { name: description, type: text }
+      - { name: linkedin, label: LinkedIn URL, type: string }
+      - { name: behance, label: Behance URL, type: string }
+      - { name: github, label: GitHub URL, type: string }

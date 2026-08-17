@@ -1,37 +1,22 @@
-# [DaveBoutin](https://daveboutin.ca/)
+# Dave Boutin portfolio
 
-[DaveBoutin](http://daveboutin.ca/) is a simple [Bootstrap](http://getbootstrap.com/) theme for Dave Boutin's personal site.
+A Next.js portfolio for daveboutin.ca, deployed on Netlify and edited through Pages CMS.
 
-## Usage
+## Content
 
-### Basic Usage
+- General biography, role, experience, and profile links live in `content/site.json`.
+- Project case studies live as Markdown files in `content/projects`.
+- Project images live in `public/images/projects`.
+- `.pages.yml` defines the Pages CMS editing interface.
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+Once this repository is connected to Pages CMS, sign in at [app.pagescms.org](https://app.pagescms.org), select the repository, and use **Projects** to create or update case studies. Each save creates a GitHub commit and triggers a Netlify deploy.
 
-### Advanced Usage
+Projects marked as drafts are excluded from the site. Projects marked as featured appear on the homepage; display order controls their sequence.
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+## Local development
 
-#### Gulp Tasks
+Install dependencies with `npm install`, then run `npm run dev`. Use `npm run build` to validate a production build.
 
-- `gulp` the default task that builds everything
-- `gulp watch` browserSync opens the project in your default browser and live reloads when changes are made
-- `gulp css` compiles SCSS files into CSS and minifies the compiled CSS
-- `gulp js` minifies the themes JS file
-- `gulp vendor` copies dependencies from node_modules to the vendor directory
+## Contact form
 
-You must have npm installed globally in order to use this build environment.
-
-## About
-
-DaveBoutin is an simple Bootstrap theme for Dave Boutin's personal site.
-
-* https://daveboutin.ca
-
-DaveBoutin theme was created by and is maintained by **[Dave Boutin](http://daveboutin.ca/)**.
-
-DaveBoutin is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2019 Dave Boutin. 
+The visible form posts to Netlify Forms. `public/forms/contact.html` is the static form definition Netlify needs when scanning a Next.js deploy. Enable form detection in the Netlify project before the first production deployment.

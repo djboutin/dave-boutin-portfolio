@@ -1,3 +1,26 @@
-node_modules
-.sass-cache
-bower_components
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# local files
+.DS_Store
+*.pem
+.env*
+!.env.example
+
+# local design and legacy references
+/oldsite/
+/newsite/
+
+# deployment
+.netlify
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
