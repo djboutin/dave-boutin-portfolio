@@ -4,7 +4,7 @@ summary: test summary
 category: test category
 year: "2022"
 role: Tech Lead and Developer
-cover: /images/babe-brewing.jpg
+cover: /images/babe-brewing-cover.jpg
 gallery:
   - /images/babe-brewing-1.jpg
 externalUrl: https://babebrewing.com/
