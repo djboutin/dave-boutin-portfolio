@@ -137,11 +137,12 @@ a {
   z-index: 1;
   max-width: 1180px;
   margin: clamp(56px, 9vh, 100px) 0 0;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(68px, 10.3vw, 166px);
-  font-weight: 400;
-  letter-spacing: -0.057em;
-  line-height: 0.8;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.065em;
+  line-height: 0.82;
 }
 
 .hero h1 span {
@@ -150,7 +151,9 @@ a {
   background: linear-gradient(100deg, var(--paper) 10%, #ff8d38 45%, var(--pink) 78%, var(--yellow));
   background-clip: text;
   color: transparent;
-  font-style: italic;
+  font-stretch: 88%;
+  font-style: normal;
+  font-weight: 360;
 }
 
 .hero-lower {
@@ -274,11 +277,12 @@ a {
 .about-preview h2 {
   max-width: 920px;
   margin: 0;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(50px, 7vw, 112px);
-  font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.95;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
 }
 
 .focus-grid {
@@ -307,9 +311,11 @@ a {
 .focus-card h3 {
   max-width: 300px;
   margin: 96px 0 20px;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(32px, 3vw, 48px);
-  font-weight: 400;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: -0.045em;
   line-height: 0.95;
 }
 
@@ -428,10 +434,11 @@ a {
 
 .project-card h3 {
   margin: 10px 0;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(31px, 3vw, 46px);
-  font-weight: 400;
-  letter-spacing: -0.035em;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: -0.045em;
   line-height: 0.95;
 }
 
@@ -467,11 +474,12 @@ a {
 .archive-callout h3 {
   max-width: 620px;
   margin: 18px 0 0;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(45px, 6vw, 90px);
-  font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.88;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
 }
 
 .archive-callout > p {
@@ -548,11 +556,12 @@ a {
 .about-copy h2,
 .contact-copy h2 {
   margin: 0 0 38px;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(52px, 6vw, 96px);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.88;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
 }
 
 .about-copy > p:not(.eyebrow),
@@ -604,9 +613,11 @@ a {
 
 .experience-list h3 {
   margin: 0;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(28px, 3vw, 46px);
-  font-weight: 400;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  letter-spacing: -0.045em;
   line-height: 1;
 }
 
@@ -782,18 +793,21 @@ a {
 .project-detail header h1 {
   max-width: 1200px;
   margin: 0;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(72px, 11vw, 170px);
-  font-weight: 400;
-  letter-spacing: -0.06em;
-  line-height: 0.78;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.07em;
+  line-height: 0.82;
 }
 
 .page-hero h1 em {
   background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow));
   background-clip: text;
   color: transparent;
-  font-weight: 400;
+  font-stretch: 88%;
+  font-style: normal;
+  font-weight: 360;
 }
 
 .work-page-hero > p:last-child {
@@ -832,9 +846,11 @@ a {
 .story-copy .story-lede {
   margin-top: 0;
   color: var(--paper);
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(36px, 4vw, 62px);
-  letter-spacing: -0.035em;
+  font-optical-sizing: auto;
+  font-weight: 460;
+  letter-spacing: -0.05em;
   line-height: 1;
 }
 
@@ -864,10 +880,11 @@ a {
 
 .work-row h2 {
   margin: 8px 0;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(40px, 5vw, 72px);
-  font-weight: 400;
-  letter-spacing: -0.04em;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.05em;
   line-height: 0.9;
 }
 
@@ -900,11 +917,12 @@ a {
 .work-empty h2 {
   max-width: 960px;
   margin: 90px 0 50px;
-  font-family: var(--font-display), serif;
+  font-family: var(--font-heading), sans-serif;
   font-size: clamp(54px, 8vw, 120px);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.86;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
 }
 
 .work-empty > a {
@@ -971,9 +989,10 @@ a {
 .prose h2,
 .prose h3 {
   color: var(--paper);
-  font-family: var(--font-display), serif;
-  font-weight: 400;
-  letter-spacing: -0.035em;
+  font-family: var(--font-heading), sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 520;
+  letter-spacing: -0.045em;
   line-height: 1;
 }
 
