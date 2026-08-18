@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Instrument_Serif, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const body = Hanken_Grotesk({
   variable: "--font-body",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const heading_old = Bricolage_Grotesque({
-  variable: "--font-heading-old",
-  subsets: ["latin"],
-  weight: "variable",
-  axes: ["opsz", "wdth"],
   display: "swap",
 });
 

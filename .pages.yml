@@ -26,10 +26,24 @@ content:
         label: Cover image
         type: image
         options: { path: projects, extensions: [jpg, jpeg, png, webp], rename: safe }
+      - { name: coverAlt, label: Cover image alt text, type: string, description: "Describe the image for visitors using screen readers." }
+      - { name: coverCaption, label: Cover image caption, type: string, description: "Optional context displayed below the cover." }
       - name: gallery
         label: Gallery
-        type: image
-        options: { path: projects, multiple: { max: 12 }, unique: true, extensions: [jpg, jpeg, png, webp], rename: safe }
+        type: object
+        list:
+          max: 12
+          collapsible:
+            collapsed: true
+            summary: "{caption} — image {index}"
+        fields:
+          - name: image
+            label: Image
+            type: image
+            required: true
+            options: { path: projects, extensions: [jpg, jpeg, png, webp], rename: safe }
+          - { name: caption, label: Caption, type: string, description: "Optional text displayed below the image and in the lightbox." }
+          - { name: alt, label: Alt text, type: string, description: "Describe the image if the caption does not already do so." }
       - { name: tags, label: Tools and capabilities, type: string, list: true }
       - { name: externalUrl, label: Live project URL, type: string }
       - { name: featured, label: Feature on homepage, type: boolean }

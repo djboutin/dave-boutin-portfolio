@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { ProjectGallery } from "@/components/project-gallery";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getProject, getProjects, renderProjectBody } from "@/lib/projects";
@@ -22,9 +23,12 @@ export default async function ProjectPage({ params }: Props) {
   return <main><SiteHeader /><article className="project-detail">
     <header><p className="eyebrow">{project.category} / {project.year}</p><h1>{project.title}</h1><p>{project.summary}</p></header>
     <dl className="project-meta"><div><dt>Role</dt><dd>{project.role}</dd></div><div><dt>Year</dt><dd>{project.year}</dd></div><div><dt>Tools</dt><dd>{project.tags.join(" · ")}</dd></div></dl>
-    {project.cover && <Image className="project-cover" src={project.cover} width={1600} height={1000} alt="" priority />}
+    {project.cover && <figure className="project-cover-figure">
+      <div className="project-cover-frame"><Image className="project-cover" src={project.cover} fill sizes="(max-width: 800px) 100vw, 86vw" alt={project.coverAlt ?? `${project.title} cover image`} priority /></div>
+      {project.coverCaption && <figcaption>{project.coverCaption}</figcaption>}
+    </figure>}
     <div className="prose" dangerouslySetInnerHTML={{ __html: content }} />
-    {project.gallery.map((image) => <Image className="project-gallery-image" src={image} width={1600} height={1000} alt="" key={image} />)}
+    <ProjectGallery images={project.gallery} projectTitle={project.title} />
     {project.externalUrl && <a className="button button-primary project-external" href={project.externalUrl} target="_blank" rel="noreferrer">Visit the project ↗</a>}
   </article><SiteFooter /></main>;
 }
