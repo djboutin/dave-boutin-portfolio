@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Instrument_Serif, Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const body = Hanken_Grotesk({
@@ -13,6 +13,13 @@ const heading = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: "variable",
   axes: ["opsz", "wdth"],
+  display: "swap",
+});
+
+const heading_hero = Instrument_Serif({
+  variable: "--font-heading-hero",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -45,7 +52,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${body.variable} ${heading.variable} ${mono.variable}`}>
+      <body className={`${body.variable} ${heading.variable} ${heading_hero.variable} ${mono.variable}`}>
         {children}
       </body>
     </html>

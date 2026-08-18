@@ -137,7 +137,7 @@ a {
   z-index: 1;
   max-width: 1180px;
   margin: clamp(56px, 9vh, 100px) 0 0;
-  font-family: var(--font-heading), sans-serif;
+  font-family: var(--font-heading-hero), sans-serif;
   font-size: clamp(68px, 10.3vw, 166px);
   font-optical-sizing: auto;
   font-weight: 520;
@@ -152,7 +152,7 @@ a {
   background-clip: text;
   color: transparent;
   font-stretch: 88%;
-  font-style: normal;
+  font-style: italic;
   font-weight: 360;
 }
 
