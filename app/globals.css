@@ -56,16 +56,11 @@ a {
   letter-spacing: -0.02em;
 }
 
-.wordmark span {
-  display: grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--pink), var(--orange) 55%, var(--yellow));
-  color: white;
-  font-family: var(--font-mono), monospace;
-  font-size: 10px;
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .site-header nav {
@@ -761,15 +756,12 @@ a {
 }
 
 .footer-mark {
-  display: grid;
-  width: 34px;
-  height: 34px;
+  display: block;
+  width: 36px;
+  height: 36px;
   margin-bottom: 14px;
-  place-items: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--pink), var(--orange), var(--yellow));
-  font-family: var(--font-mono), monospace;
-  font-size: 10px;
+  border-radius: 9px;
+  object-fit: cover;
 }
 
 .footer-links {

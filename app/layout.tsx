@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   title: { default: "Dave Boutin — Technology Lead & Senior Developer", template: "%s" },
   description:
     "Technology Lead at Freshwater Creative. I lead teams and build durable digital products from complex requirements.",
+  icons: {
+    icon: [{ url: "/images/favicon.png", type: "image/png" }],
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
   openGraph: {
     type: "website", url: "https://daveboutin.ca", siteName: "Dave Boutin",
     title: "Dave Boutin — Technology Lead & Senior Developer",
