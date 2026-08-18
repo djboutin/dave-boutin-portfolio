@@ -22,7 +22,7 @@ export default function Home() {
       <SiteHeader />
       <section className="hero" id="top">
         <div className="hero-kicker"><span className="status-dot" aria-hidden="true" />{site.role} · {site.employer}</div>
-        <h1>I build the systems<span>behind ambitious ideas.</span></h1>
+        <h1>I build the systems<span>behind ambitious ideas</span></h1>
         <div className="hero-lower">
           <p>{site.introduction}</p>
           <div className="hero-actions">
@@ -34,14 +34,14 @@ export default function Home() {
       </section>
 
       <section className="focus-section" id="expertise">
-        <div className="section-heading"><p>What I lead</p><h2>From first sketch to dependable system.</h2></div>
+        <div className="section-heading"><p>What I lead</p><h2>From first sketch to <em>dependable system</em></h2></div>
         <div className="focus-grid">
           {focusAreas.map((area) => <article className="focus-card" key={area.number}><span>{area.number}</span><h3>{area.title}</h3><p>{area.description}</p></article>)}
         </div>
       </section>
 
       <section className="selected-work" id="work" aria-labelledby="work-heading">
-        <div className="section-heading section-heading-work"><p>Selected work</p><div><h2 id="work-heading">Built with intent.</h2><p className="section-intro">A growing collection of digital platforms, applications, and content ecosystems I&apos;ve helped shape.</p></div></div>
+        <div className="section-heading section-heading-work"><p>Selected work</p><div><h2 id="work-heading">Work to achieve <em> clear goals</em></h2><p className="section-intro">A growing collection of digital platforms, applications, and content ecosystems I&apos;ve helped shape.</p></div></div>
         {projects.length > 0 ? (
           <div className="project-grid">
             {projects.map((project, index) => (
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="archive-callout">
-            <div><span>Archive / in transition</span><h3>New case studies are being prepared.</h3></div>
+            <div><span>Archive / in transition</span><h3><em>New case studies </em> are being prepared.</h3></div>
             <p>My earlier client and professional work remains available on Behance while I document newer projects here.</p>
             <a href={site.behance} target="_blank" rel="noreferrer">Browse the Behance archive <span aria-hidden="true">↗</span></a>
           </div>
@@ -69,14 +69,14 @@ export default function Home() {
         </div>
         <div className="about-copy">
           <p className="eyebrow">About / Dave</p>
-          <h2>Curious by default. Pragmatic when it counts.</h2>
+          <h2>Curious by default. <em>Pragmatic when it counts.</em></h2>
           <p className="about-lede">{site.about.lede}</p><p>{site.about.body}</p>
           <Link className="text-link" href="/about">Read the longer story <span aria-hidden="true">→</span></Link>
         </div>
       </section>
 
       <section className="experience-section" id="experience">
-        <div className="section-heading"><p>Experience</p><h2>Leadership grounded in making.</h2></div>
+        <div className="section-heading"><p>Experience</p><h2>Leadership from <em>experience.</em></h2></div>
         <div className="experience-list">
           {site.experience.map((item, index) => <article key={`${item.company}-${item.role}`}><span>0{index + 1}</span><h3>{item.role}</h3><p>{item.company}</p><p>{item.description}</p></article>)}
         </div>

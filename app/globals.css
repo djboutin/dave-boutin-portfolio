@@ -279,10 +279,21 @@ a {
   margin: 0;
   font-family: var(--font-heading), sans-serif;
   font-size: clamp(50px, 7vw, 112px);
+  font-style: italic;
   font-optical-sizing: auto;
   font-weight: 520;
   letter-spacing: -0.055em;
   line-height: 0.92;
+
+  em {
+  background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow));
+  background-clip: text;
+  color: transparent;
+  font-stretch: 88%;
+  font-style: normal;
+  font-weight: 360;
+}
+
 }
 
 .focus-grid {
@@ -480,6 +491,15 @@ a {
   font-weight: 520;
   letter-spacing: -0.055em;
   line-height: 0.9;
+
+  em {
+  background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow));
+  background-clip: text;
+  color: transparent;
+  font-stretch: 88%;
+  font-style: normal;
+  font-weight: 360;
+}
 }
 
 .archive-callout > p {
@@ -560,8 +580,18 @@ a {
   font-size: clamp(52px, 6vw, 96px);
   font-optical-sizing: auto;
   font-weight: 520;
+  font-style: italic;
   letter-spacing: -0.06em;
   line-height: 0.9;
+
+  em {
+  background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow));
+  background-clip: text;
+  color: transparent;
+  font-stretch: 88%;
+  font-style: normal;
+  font-weight: 360;
+}
 }
 
 .about-copy > p:not(.eyebrow),

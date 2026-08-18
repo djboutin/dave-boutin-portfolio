@@ -8,11 +8,18 @@ const body = Hanken_Grotesk({
   display: "swap",
 });
 
-const heading = Bricolage_Grotesque({
-  variable: "--font-heading",
+const heading_old = Bricolage_Grotesque({
+  variable: "--font-heading-old",
   subsets: ["latin"],
   weight: "variable",
   axes: ["opsz", "wdth"],
+  display: "swap",
+});
+
+const heading = Instrument_Serif({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
