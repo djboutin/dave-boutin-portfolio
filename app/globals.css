@@ -577,6 +577,17 @@ a {
   border: 1px solid var(--line);
   filter: grayscale(1) contrast(1.12);
   transform: rotate(-2deg);
+  transition:
+    filter 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: filter, transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .about-image-wrap:hover .about-image {
+    filter: grayscale(0) contrast(1.02) saturate(1.05);
+    transform: rotate(1deg) scale(1.015);
+  }
 }
 
 .image-accent {
@@ -1403,5 +1414,13 @@ a {
     opacity: 1 !important;
     transform: none !important;
     filter: none !important;
+  }
+
+  .about-image {
+    transition: none !important;
+  }
+
+  .about-image-wrap:hover .about-image {
+    transform: rotate(-2deg);
   }
 }
