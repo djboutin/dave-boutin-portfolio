@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { ViewportReveals } from "@/components/viewport-reveals";
 import "./globals.css";
 
 const body = Hanken_Grotesk({
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body className={`${body.variable} ${heading.variable} ${heading_hero.variable} ${mono.variable}`}>
         {children}
+        <ViewportReveals />
       </body>
     </html>
   );

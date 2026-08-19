@@ -28,6 +28,37 @@ body {
   line-height: 1.5;
 }
 
+/* Viewport reveals progressively enhance the server-rendered content. */
+[data-reveal-section] > * {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(3px);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal-section][data-reveal-state="visible"] > * {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+[data-reveal-item] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 90ms);
+}
+
+[data-reveal-state="visible"] [data-reveal-item] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -1365,5 +1396,12 @@ a {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal-section] > *,
+  [data-reveal-item] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
   }
 }
