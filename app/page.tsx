@@ -44,13 +44,14 @@ export default function Home() {
         <div className="section-heading section-heading-work"><p>Selected work</p><div><h2 id="work-heading">Work to achieve <em> clear goals</em></h2><p className="section-intro">A growing collection of digital platforms, applications, and content ecosystems I&apos;ve helped shape.</p></div></div>
         {projects.length > 0 ? (
           <div className="project-grid">
-            {projects.map((project, index) => (
-              <Link className="project-card" href={`/work/${project.slug}`} key={project.slug}>
-                {project.cover ? <Image src={project.cover} alt="" width={960} height={720} sizes="(max-width: 800px) 100vw, 33vw" /> : <span className="project-placeholder" aria-hidden="true" />}
+            {projects.map((project, index) => {
+              const thumbnail = project.thumbnail ?? project.cover;
+              return <Link className="project-card" href={`/work/${project.slug}`} key={project.slug}>
+                {thumbnail ? <span className="project-card-media"><Image src={thumbnail} alt={project.thumbnailAlt ?? `${project.title} project thumbnail`} fill sizes="(max-width: 800px) 100vw, 33vw" /></span> : <span className="project-placeholder" aria-hidden="true" />}
                 <span className="project-index">0{index + 1}</span>
                 <div><span>{project.category}</span><h3>{project.title}</h3><p>{project.summary}</p></div>
-              </Link>
-            ))}
+              </Link>;
+            })}
           </div>
         ) : (
           <div className="archive-callout">

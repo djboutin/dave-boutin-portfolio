@@ -11,7 +11,7 @@ export type ProjectGalleryItem = {
   alt?: string;
 };
 
-export type Project = { slug: string; title: string; summary: string; category: string; year: string; role: string; cover?: string; coverCaption?: string; coverAlt?: string; gallery: ProjectGalleryItem[]; tags: string[]; externalUrl?: string; featured: boolean; draft: boolean; order: number; content: string };
+export type Project = { slug: string; title: string; summary: string; category: string; year: string; role: string; thumbnail?: string; thumbnailAlt?: string; cover?: string; coverCaption?: string; coverAlt?: string; gallery: ProjectGalleryItem[]; tags: string[]; externalUrl?: string; featured: boolean; draft: boolean; order: number; content: string };
 
 function parseGallery(gallery: unknown): ProjectGalleryItem[] {
   if (!Array.isArray(gallery)) return [];
@@ -35,7 +35,7 @@ function parseProject(fileName: string): Project {
   const slug = fileName.replace(/\.md$/, "");
   const source = fs.readFileSync(path.join(projectsDirectory, fileName), "utf8");
   const { data, content } = matter(source);
-  return { slug, title: data.title ?? slug, summary: data.summary ?? "", category: data.category ?? "Project", year: String(data.year ?? ""), role: data.role ?? "", cover: data.cover || undefined, coverCaption: data.coverCaption || undefined, coverAlt: data.coverAlt || undefined, gallery: parseGallery(data.gallery), tags: Array.isArray(data.tags) ? data.tags : [], externalUrl: data.externalUrl || undefined, featured: Boolean(data.featured), draft: Boolean(data.draft), order: Number(data.order ?? 999), content };
+  return { slug, title: data.title ?? slug, summary: data.summary ?? "", category: data.category ?? "Project", year: String(data.year ?? ""), role: data.role ?? "", thumbnail: data.thumbnail || undefined, thumbnailAlt: data.thumbnailAlt || undefined, cover: data.cover || undefined, coverCaption: data.coverCaption || undefined, coverAlt: data.coverAlt || undefined, gallery: parseGallery(data.gallery), tags: Array.isArray(data.tags) ? data.tags : [], externalUrl: data.externalUrl || undefined, featured: Boolean(data.featured), draft: Boolean(data.draft), order: Number(data.order ?? 999), content };
 }
 
 export function getProjects(includeDrafts = false): Project[] {

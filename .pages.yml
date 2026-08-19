@@ -22,9 +22,16 @@ content:
       - { name: category, label: Category, type: string, required: true }
       - { name: year, label: Year, type: string, required: true }
       - { name: role, label: My role, type: string, required: true }
-      - name: cover
-        label: Cover image
+      - name: thumbnail
+        label: Card thumbnail
         type: image
+        description: "Landscape image used on the homepage and work index. A 4:3 crop works best. Falls back to the cover image when empty."
+        options: { path: projects, extensions: [jpg, jpeg, png, webp], rename: safe }
+      - { name: thumbnailAlt, label: Card thumbnail alt text, type: string, description: "Briefly describe the thumbnail for visitors using screen readers." }
+      - name: cover
+        label: Project page cover
+        type: image
+        description: "Large image shown at the top of the individual project page. This can differ from the card thumbnail."
         options: { path: projects, extensions: [jpg, jpeg, png, webp], rename: safe }
       - { name: coverAlt, label: Cover image alt text, type: string, description: "Describe the image for visitors using screen readers." }
       - { name: coverCaption, label: Cover image caption, type: string, description: "Optional context displayed below the cover." }

@@ -4,6 +4,8 @@ summary: test summary
 category: test category
 year: "2022"
 role: Tech Lead and Developer
+thumbnail: /images/babe-brewing-cover.jpg
+thumbnailAlt: Babe Brewing microsite artwork featuring the blueberry vanilla ale
 cover: /images/babe-social.jpg
 gallery:
   - image: /images/babe-desktop.jpg

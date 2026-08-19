@@ -400,11 +400,16 @@ a {
   min-width: 0;
 }
 
-.project-card img,
+.project-card-media,
 .project-placeholder {
+  position: relative;
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.project-card-media img {
   object-fit: cover;
   filter: saturate(0.65) contrast(1.08);
   transition: filter 260ms ease, transform 260ms ease;
