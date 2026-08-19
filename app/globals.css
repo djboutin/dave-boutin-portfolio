@@ -141,7 +141,7 @@ a {
   font-size: clamp(68px, 10.3vw, 166px);
   font-optical-sizing: auto;
   font-weight: 520;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.025em;
   line-height: 0.82;
 }
 
